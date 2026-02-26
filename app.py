@@ -20,7 +20,16 @@ import yfinance as yf
 from research import research_stock, compare_stocks
 from model import predict_today
 
+import os
 
+# Bridge: load secrets from Streamlit Cloud into environment variables
+# Locally, python-dotenv handles this via .env file
+try:
+    for key in ["GROQ_API_KEY", "NEWS_API_KEY"]:
+        if key in st.secrets:
+            os.environ[key] = st.secrets[key]
+except Exception:
+    pass
 # ─────────────────────────────────────────────
 # PAGE CONFIG
 # ─────────────────────────────────────────────

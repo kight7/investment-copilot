@@ -1,0 +1,12 @@
+streamlit
+openai
+yfinance
+anthropic
+python-dotenv
+requests
+pandas
+numpy
+plotly
+newsapi-python
+google-genai
+groq

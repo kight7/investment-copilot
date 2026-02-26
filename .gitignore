@@ -1,0 +1,26 @@
+# Virtual environment
+venv/
+
+# Environment variables (API keys — NEVER commit these)
+.env
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Mac
+.DS_Store
+
+# Model artifacts
+*.pkl
+*.joblib
+*.h5
+
+# Streamlit
+.streamlit/secrets.toml

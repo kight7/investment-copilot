@@ -1,7 +1,15 @@
 import os
 from groq import Groq
 from dotenv import load_dotenv
+import streamlit as st
 
+# Load secrets from Streamlit Cloud if available
+try:
+    for key in ["GROQ_API_KEY", "NEWS_API_KEY"]:
+        if key in st.secrets:
+            os.environ[key] = st.secrets[key]
+except Exception:
+    pass
 load_dotenv()
 
 # Groq runs Llama 3.3 70B on their own ultra-fast hardware
